@@ -32,33 +32,6 @@ var jsonData = [
  }
 ];
 
-function uploadImage() {
-    var input = document.getElementById('imageInput');
-    var file = input.files[0];
-
-    if (file) {
-        // Get the file name without extension
-        var fileName = file.name.split('.')[0];
-
-        // Find the corresponding item in the JSON data
-        var selectedItem = jsonData.find(item => item.item_id === fileName);
-
-        // Display result
-        if (selectedItem) {
-            document.getElementById('result').innerHTML = `
-                <p><strong>Item ID:</strong> ${selectedItem.item_id}</p>
-                <p><strong>Item Description:</strong> ${selectedItem.item_description_id}</p>
-                <img src="${selectedItem.item_image_url_id}" alt="${selectedItem.item_id}">
-                <!-- Add more details as needed -->
-            `;
-        } else {
-            document.getElementById('result').innerHTML = 'Item not found in the JSON data.';
-        }
-    } else {
-        document.getElementById('result').innerHTML = 'Please select an image.';
-    }
-}
-
 function submitImage() {
     var input = document.getElementById('chooseImage');
     var file = input.files[0];
@@ -66,9 +39,14 @@ function submitImage() {
     if (file) {
         // Get the file name without extension
         var fileName = file.name.split('.')[0];
+        console.log('Selected File Name:', fileName);
+
+        // Log the entire JSON data array
+        console.log('JSON Data:', jsonData);
 
         // Find the corresponding item in the JSON data
         var selectedItem = jsonData.find(item => item.item_id === fileName);
+        console.log('Selected Item:', selectedItem);
 
         // Display result
         var selectedItemInfoDiv = document.getElementById('selectedItemInfo');
