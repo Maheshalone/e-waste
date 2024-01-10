@@ -3,42 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <!-- Include your CSS styles -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Image Upload App</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-    <!-- Home Section -->
-    <section id="home">
+    <section>
         <h1>Welcome to Our Website</h1>
-        <!-- Add other content as needed -->
-        <label for="chooseImage">Choose an Image:</label>
-        <input type="file" id="chooseImage" accept="image/*">
+        <input type="file" id="chooseImage" accept=".jpeg, .jpg, .png, .gif, .tiff">
         <button onclick="submitImage()">Submit</button>
+    </section>
+    <section id="selectedItemInfo">
         <!-- Display selected item information here -->
-        <div id="selectedItemInfo"></div>
     </section>
-
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <!-- Add a contact form or contact details -->
-    </section>
-
-    <!-- AI Engine Section -->
-    <section id="ai-engine">
-        <h2>AI Engine</h2>
-        <p>Click the button below to upload an image and provide a description.</p>
-        <input type="file" id="imageInput">
-        <button onclick="uploadImage()">Upload Image</button>
-        <!-- Display image and description result here -->
-        <div id="result"></div>
-    </section>
-
-    <!-- Include the JSON data -->
-    <script src="data.js"></script>
-    <!-- Include your JavaScript file -->
-    <script src="script.js"></script>
 </body>
 </html>
