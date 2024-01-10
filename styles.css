@@ -8,7 +8,7 @@ section {
     margin: 20px;
 }
 
-#result {
+#result, #selectedItemInfo {
     margin-top: 20px;
     font-weight: bold;
 }
